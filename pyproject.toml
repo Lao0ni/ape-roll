@@ -13,7 +13,7 @@ repository = "https://github.com/fp-crypto/ape-roll"
 
 [tool.poetry.dependencies]
 python = ">=3.8,<3.12"
-eth-ape = "^0.6.18"
+eth-ape = "^0.7"
 
 [tool.poetry.dev-dependencies]
 pytest = ">=6.0"

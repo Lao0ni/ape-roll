@@ -114,7 +114,10 @@ class FunctionFragment:
         # split up complex types into 32 byte chunks that weiroll state can handle
         args = simple_args(self.simple_sizes, args)
 
-        assert self.simple_inputs is not None
+        # If the function has inputs, check simple imputs
+        if len(self.inputs) > 0:
+            assert self.simple_inputs is not None
+        
         return [encodeArg(arg, self.simple_inputs[i]) for (i, arg) in enumerate(args)]
 
 
